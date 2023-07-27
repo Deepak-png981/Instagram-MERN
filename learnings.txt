@@ -1,0 +1,8 @@
+firebase is known as serverless development not
+fullstack development because their is no need of server
+
+express js is a framework of nodejs
+
+CORS policy . api jaaha bani hai or jaha se call ker 
+rehe hai unka domain alag hai to cors pollicy request
+ko initiate nhi hone dendi hai bro

@@ -46,6 +46,15 @@ router.post('/signin', (req, res) => {
         if (!savedUser) {
             return res.status(422).json({ error: "Invalid email" });
         }
+        //comparing the password
+        bcrypt.compare(password, savedUser.password).then((match) => {
+            if (match) {
+                return res.status(200).json({ message: "Sign in successfully" });
+            } else {
+                return res.status(422).json({ error: "Please enter correct password" });
+            }
+        })
+            .catch(err => { console.log(err) })
     })
 })
 
